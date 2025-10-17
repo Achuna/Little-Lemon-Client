@@ -1,15 +1,17 @@
 .hero {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-    flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
   background-color: var(--dark-green);
   color: white;
   padding: 0rem 8rem;
   box-shadow: var(--shadow-soft);
+  gap: 2rem;
 }
 
-/* Text Section */
+/* === TEXT SECTION === */
 .hero-content {
   flex: 1 1 450px;
   z-index: 2;
@@ -18,12 +20,14 @@
 .hero-content h1 {
   color: var(--yellow);
   font-size: 64px;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 0.5rem;
+  line-height: 1.1;
 }
 
 .hero-content h2 {
   font-size: 32px;
+  font-weight: 400;
   margin: 0;
 }
 
@@ -32,9 +36,10 @@
   line-height: 1.6;
   margin: 1.5rem 0;
   max-width: 400px;
+  color: var(--light-gray);
 }
 
-.hero-content button {
+.reserve-btn {
   background-color: var(--yellow);
   color: black;
   border: none;
@@ -43,40 +48,106 @@
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
 }
 
-.hero-content button:hover {
+.reserve-btn:hover {
   background-color: var(--salmon);
 }
 
-/* Image Section */
+/* === IMAGE SECTION === */
 .hero img {
-  flex: 1 1 300px;
-  max-width: 400px;
+  flex: 1 1 350px;
+  max-width: 450px;
+  width: 100%;
+  height: auto;
   border-radius: var(--radius-md);
   position: relative;
-  top: 2.5rem; /* adds subtle Y offset */
+  top: 2rem; /* subtle Y offset */
   z-index: 4;
   box-shadow: var(--shadow-soft);
 }
 
-/* Make hero full-width background on mobile */
+/* === TABLET LAYOUT === */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 3rem 4rem;
+    gap: 1.5rem;
+  }
+
+  .hero-content h1 {
+    font-size: 48px;
+  }
+
+  .hero-content h2 {
+    font-size: 26px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+}
+
+/* === MOBILE LAYOUT === */
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
+    justify-content: center;
     text-align: center;
-    padding: 2rem;
-    width: 100%;
+    padding: 2.5rem 1.5rem;
     border-radius: 0;
   }
 
   .hero-content {
+    flex: unset;
     padding: 0;
+    max-width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 40px;
+  }
+
+  .hero-content h2 {
+    font-size: 22px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+    margin: 1.2rem auto;
+    max-width: 90%;
   }
 
   .hero img {
     margin-top: 2rem;
     max-width: 90%;
     top: 0;
+    align-self: center;
+  }
+
+  .reserve-btn {
+    width: 80%;
+    max-width: 300px;
+  }
+}
+
+/* === SMALL MOBILE (IPHONES, ETC.) === */
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content h2 {
+    font-size: 20px;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  .reserve-btn {
+    font-size: 16px;
+    padding: 0.7rem 1rem;
   }
 }

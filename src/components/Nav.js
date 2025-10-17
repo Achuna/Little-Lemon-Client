@@ -3,7 +3,7 @@ import logo from '../assets/logo.png'; // add your actual logo path
 
 export default function Nav() {
   return (
-    <nav className="navbar">
+    <nav aria-label='Main Navigation' className="navbar">
       <div className="nav-logo">
         <a href="/">
           <img src={logo} alt="Little Lemon logo" />

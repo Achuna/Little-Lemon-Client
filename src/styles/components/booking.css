@@ -1,0 +1,154 @@
+/* === Booking Page === */
+.booking-page {
+  width: 90%;
+  max-width: 700px;
+  margin: 4rem auto;
+  text-align: center;
+  padding: 2rem;
+}
+
+.booking-header h1 {
+  font-family: var(--font-display);
+  font-size: 40px;
+  color: var(--dark-green);
+  margin-bottom: 0.5rem;
+}
+
+.booking-header p {
+  color: var(--dark-gray);
+  font-size: 16px;
+  margin-bottom: 2rem;
+}
+
+/* === Booking Form === */
+.booking-form {
+  display: grid;
+  gap: 1.5rem;
+  padding: 2rem;
+  background-color: var(--dark-green);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  text-align: left;
+}
+
+.booking-form label {
+  font-weight: bold;
+  color: white;
+}
+
+.booking-form input,
+.booking-form select {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: var(--radius-md);
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  background-color: var(--light-gray);
+}
+
+.booking-form input:focus,
+.booking-form select:focus {
+  outline: 2px solid var(--yellow);
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color: var(--yellow);
+  color: black;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 0.8rem 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: var(--salmon);
+}
+
+/* === Responsive === */
+@media (max-width: 600px) {
+  .booking-page {
+    padding: 1rem;
+  }
+
+  .booking-form {
+    padding: 1.5rem;
+  }
+}
+
+
+.booking-table {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.booking-table h2 {
+  font-family: var(--font-display);
+  font-size: 24px;
+  color: var(--dark-green);
+  margin-bottom: 1rem;
+}
+
+.booking-table table {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+}
+
+.booking-table th,
+.booking-table td {
+  border-bottom: 1px solid #ccc;
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+
+.booking-table th {
+  background-color: var(--yellow);
+  color: black;
+  text-transform: uppercase;
+}
+
+.booking-table tr:last-child td {
+  border-bottom: none;
+}
+
+
+.booking-confirmed {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: var(--dark-green);
+  color: white;
+  border-radius: var(--radius-md);
+  margin: 4rem auto;
+  max-width: 600px;
+  box-shadow: var(--shadow-soft);
+}
+
+.booking-confirmed h1 {
+  font-family: var(--font-display);
+  color: var(--yellow);
+  font-size: 40px;
+  margin-bottom: 1rem;
+}
+
+.booking-confirmed p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.booking-form input:invalid,
+.booking-form select:invalid {
+  border: 2px solid #ff6666;
+}
+
+.submit-btn.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
